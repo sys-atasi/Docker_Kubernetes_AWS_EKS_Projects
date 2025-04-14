@@ -1,0 +1,45 @@
+# apiVersion: apps/v1
+# kind: Deployment
+# metadata:
+#   name: customer-service
+# spec:
+#   replicas: 1
+#   selector:
+#     matchLabels:
+#       app: customer-service
+#   template:
+#     metadata:
+#       labels:
+#         app: customer-service
+#     spec:
+#       containers:
+#         - name: customer-service
+#           image: atasimaji/customer-service
+#           imagePullPolicy: Always      
+#           ports:
+#             - containerPort: 6655
+#http://127.0.0.1:64203/api/customers
+
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: customer-deployment
+  labels:
+    app: customer
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: customer
+  template:
+    metadata:
+      labels:
+        app: customer
+    spec:
+      containers:
+        - name: customer-container
+          image: 851725445215.dkr.ecr.us-east-1.amazonaws.com/customer-service:latest
+          ports:
+            - containerPort: 6655
+          imagePullPolicy: Always

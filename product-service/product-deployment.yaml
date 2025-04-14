@@ -1,0 +1,45 @@
+# apiVersion: apps/v1
+# kind: Deployment
+# metadata:
+#   name: product-service
+# spec:
+#   replicas: 1
+#   selector:
+#     matchLabels:
+#       app: product-service
+#   template:
+#     metadata:
+#       labels:
+#         app: product-service
+#     spec:
+#       containers:
+#         - name: product-service
+#           image: atasimaji/product-service
+#           imagePullPolicy: Always
+#           ports:
+#             - containerPort: 5566
+#http://127.0.0.1:63391/api/products
+
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: product-deployment
+  labels:
+    app: product
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: product
+  template:
+    metadata:
+      labels:
+        app: product
+    spec:
+      containers:
+        - name: product-container
+          image: 851725445215.dkr.ecr.us-east-1.amazonaws.com/product-service:latest
+          ports:
+            - containerPort: 5566
+          imagePullPolicy: Always
