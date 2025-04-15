@@ -81,7 +81,8 @@ Each service is containerized with Docker and deployed to a **local Kubernetes c
 
 ## ☸️ Kubernetes Deployment
 ### Customer-service-deployment.yaml
-![Uploading Screenshot 2025-04-14 170137.png…]()
+![Screenshot 2025-04-14 170137](https://github.com/user-attachments/assets/2535e2a9-bd7b-4cfc-ac09-19c3236aea13)
+
 
 ### Customer-service-service.yaml
 ![customer-service-service](https://github.com/user-attachments/assets/c1821100-9214-423a-93ae-a65c897eac5d)
@@ -105,17 +106,17 @@ Each service is containerized with Docker and deployed to a **local Kubernetes c
 
 
 ## ✅ Deploy customer-service:
-### kubectl apply -f customer-deployment.yaml <br>
-### kubectl apply -f customer-service.yaml
+# kubectl apply -f customer-deployment.yaml <br>
+# kubectl apply -f customer-service.yaml
 
 ## ✅ Deploy product-service:
-### kubectl apply -f product-deployment.yaml <br>
-### kubectl apply -f product-service.yaml
+# kubectl apply -f product-deployment.yaml <br>
+# kubectl apply -f product-service.yaml
 
 ## To check the status: 
 
-### kubectl get pods <br>
-### kubectl get services
+# kubectl get pods <br>
+# kubectl get services
 ![Screenshot 2025-04-14 120733](https://github.com/user-attachments/assets/c93b1c17-1448-4f81-b8f1-cde0754764f0)
 
 ![Screenshot 2025-04-14 120749](https://github.com/user-attachments/assets/8dea0495-da2f-48b3-b3ce-80dd27f2207e)
@@ -136,7 +137,7 @@ Each service is containerized with Docker and deployed to a **local Kubernetes c
 ## for customer-service
 ![Screenshot 2025-04-14 170315](https://github.com/user-attachments/assets/a319fe6b-cca1-47aa-9899-70de0f910f5b)
 
-# To deploy our Dockerized Spring Boot microservices (customer-service and product-service) to Amazon EKS (Elastic Kubernetes Service)
+# 🧩 To deploy our Dockerized Spring Boot microservices (customer-service and product-service) to Amazon EKS (Elastic Kubernetes Service)
 
 ## ✅ Prerequisites
 AWS CLI installed and configured (aws configure)__
@@ -176,18 +177,18 @@ IAM permissions for creating EKS resources
 
 ## ☸️ Step 4: Deploy to EKS Cluster
 
-# kubectl apply -f customer-service-deployment.yaml
-# kubectl apply -f customer-service-service.yaml
+## kubectl apply -f customer-service-deployment.yaml
+## kubectl apply -f customer-service-service.yaml
 
-# kubectl apply -f product-service-deployment.yaml
-# kubectl apply -f product-service-service.yaml
+## kubectl apply -f product-service-deployment.yaml
+## kubectl apply -f product-service-service.yaml
 
 ## 🔎 Step 6: Verify Everything
-# kubectl get pods <br>
-# kubectl get deployments <br>
-# kubectl get services
-## Then check external IPs:
-# kubectl get services
+## kubectl get pods <br>
+## kubectl get deployments <br>
+## kubectl get services
+### Then check external IPs:
+## kubectl get services
 
 ## for customer-service
 ![Screenshot 2025-04-14 182714](https://github.com/user-attachments/assets/9481c5d6-7bfc-4cb1-b4bb-7bdea14b2a07)
