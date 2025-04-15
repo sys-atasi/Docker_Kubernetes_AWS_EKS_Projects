@@ -18,11 +18,11 @@ Each service is containerized using Docker
 ##  Building Docker Images
 
 ### Build for customer-service
-cd customer-service
+cd customer-service <br>
 docker build -t customer-service .
 
 ### Build for product-service
-cd product-service
+cd product-service <br>
 docker build -t product-service .
 
 ## Running Containers Individually
@@ -40,9 +40,9 @@ docker build -t product-service .
 
 ### Stopping & Cleaning Up
 
-docker stop customer-service 
-docker stop product-service
-docker rm customer-service
+docker stop customer-service <br>
+docker stop product-service <br>
+docker rm customer-service <br>
 docker rm product-service
 
 
