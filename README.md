@@ -40,8 +40,10 @@ docker build -t product-service .
 
 ### Stopping & Cleaning Up
 
-docker stop customer-service product-service
-docker rm customer-service product-service
+docker stop customer-service 
+docker stop product-service
+docker rm customer-service
+docker rm product-service
 
 
 
