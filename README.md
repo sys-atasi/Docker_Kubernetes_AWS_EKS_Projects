@@ -67,7 +67,7 @@ Each service is containerized with Docker and deployed to a **local Kubernetes c
 ## minikube start 
 
 ## for customer-service
-![customer-service-minikubestart](https://github.com/user-attachments/assets/9e99d344-59f1-4e09-b612-96031159801f)
+![Screenshot 2025-04-14 170137](https://github.com/user-attachments/assets/f6196c28-e074-44c4-9eb9-628fc7999d6a)
 
 ## for product-service
 ![product-service-minikubestart](https://github.com/user-attachments/assets/89184652-b9a6-4fdf-9f25-61e162a50adb)
@@ -105,12 +105,12 @@ Each service is containerized with Docker and deployed to a **local Kubernetes c
 
 
 ## ✅ Deploy customer-service:
-### kubectl apply -f customer-service-deployment.yaml <br>
-### kubectl apply -f customer-service-service.yaml
+### kubectl apply -f customer-deployment.yaml <br>
+### kubectl apply -f customer-service.yaml
 
 ## ✅ Deploy product-service:
-### kubectl apply -f product-service-deployment.yaml <br>
-### kubectl apply -f product-service-service.yaml
+### kubectl apply -f product-deployment.yaml <br>
+### kubectl apply -f product-service.yaml
 
 ## To check the status: 
 
@@ -135,6 +135,75 @@ Each service is containerized with Docker and deployed to a **local Kubernetes c
 
 ## for customer-service
 ![Screenshot 2025-04-14 170315](https://github.com/user-attachments/assets/a319fe6b-cca1-47aa-9899-70de0f910f5b)
+
+# To deploy our Dockerized Spring Boot microservices (customer-service and product-service) to Amazon EKS (Elastic Kubernetes Service)
+
+## ✅ Prerequisites
+AWS CLI installed and configured (aws configure)__
+eksctl installed__
+kubectl installed__
+Docker installed and logged into Docker Hub__
+IAM permissions for creating EKS resources
+
+## 🧱 Step 1: Create EKS Cluster
+
+## for customer-service
+![Screenshot 2025-04-14 172816](https://github.com/user-attachments/assets/0d4ccd17-c27e-4b0b-ad5f-8d96812a1ddb)
+## for product-service
+![Screenshot 2025-04-14 190916](https://github.com/user-attachments/assets/b5bb305a-797b-4719-b5f8-35443544716a)
+
+![Screenshot 2025-04-14 183103](https://github.com/user-attachments/assets/95fa8c67-855e-4d3c-8076-567dd4c78efe)
+
+## 🐳 Step 2: Build and Push Docker Images to Docker Hub (Already done above)
+## for customer-service
+![Screenshot 2025-04-14 173850](https://github.com/user-attachments/assets/52bbf63e-db6d-45b8-b0c7-87d1a5902850)
+![Screenshot 2025-04-14 173838](https://github.com/user-attachments/assets/21c3c283-0874-4572-b084-02bd89919eb6)
+
+## for product-services
+![Screenshot 2025-04-14 191028](https://github.com/user-attachments/assets/ed3f1664-33a6-4e03-aba1-035ebcf23d12)
+
+## 📁 Step 3: Update Kubernetes Manifests with Public Image Paths
+# Update our deployment.yaml files to use the full image name:
+##  for customer-service 
+![Screenshot 2025-04-14 181016](https://github.com/user-attachments/assets/61980ffe-83f6-431a-9150-60551e967d77)
+## Expose Services (Use LoadBalancer)
+![Screenshot 2025-04-14 182632](https://github.com/user-attachments/assets/c7f9eea1-7849-4f61-b121-d2befaedc4c1)
+
+## for product-service 
+![Screenshot 2025-04-14 190826](https://github.com/user-attachments/assets/12de0f68-a38a-4f1b-8bac-2429a8fde224)
+## Expose Services (Use LoadBalancer)
+![Screenshot 2025-04-14 190833](https://github.com/user-attachments/assets/578cc718-698b-4987-879b-34aeed7c8ecc)
+
+## ☸️ Step 4: Deploy to EKS Cluster
+
+# kubectl apply -f customer-service-deployment.yaml
+# kubectl apply -f customer-service-service.yaml
+
+# kubectl apply -f product-service-deployment.yaml
+# kubectl apply -f product-service-service.yaml
+
+## 🔎 Step 6: Verify Everything
+# kubectl get pods <br>
+# kubectl get deployments <br>
+# kubectl get services
+## Then check external IPs:
+# kubectl get services
+
+## for customer-service
+![Screenshot 2025-04-14 182714](https://github.com/user-attachments/assets/9481c5d6-7bfc-4cb1-b4bb-7bdea14b2a07)
+
+## for product-service
+![Screenshot 2025-04-14 190928](https://github.com/user-attachments/assets/351883a9-8fc0-4d54-ae09-13608c64999a)
+
+## Running/Testing:-
+
+## for customer-service
+![Screenshot 2025-04-14 182811](https://github.com/user-attachments/assets/6a01c891-8109-41cb-89f1-78a176e40ad1)
+
+## for products-service
+![Screenshot 2025-04-14 190946](https://github.com/user-attachments/assets/95b1284c-caef-4215-9264-f02e290a0324)
+
+
 
 
 
