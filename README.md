@@ -81,7 +81,7 @@ Each service is containerized with Docker and deployed to a **local Kubernetes c
 
 ## ☸️ Kubernetes Deployment
 ### Customer-service-deployment.yaml
-![customer-service-deployment](https://github.com/user-attachments/assets/21c8e350-4f26-41fa-9aeb-9f50d952a1d3)
+![Uploading Screenshot 2025-04-14 170137.png…]()
 
 ### Customer-service-service.yaml
 ![customer-service-service](https://github.com/user-attachments/assets/c1821100-9214-423a-93ae-a65c897eac5d)
@@ -90,7 +90,8 @@ Each service is containerized with Docker and deployed to a **local Kubernetes c
 ![product-service-deployment](https://github.com/user-attachments/assets/8afc9d74-8b43-44cd-b18b-70421cfb9424)
 
 ### product-service-service.yaml
-![docker-file-product-service](https://github.com/user-attachments/assets/0bfbafd8-84d8-47fa-b0a9-5996335305dc)
+![Screenshot 2025-04-14 170036](https://github.com/user-attachments/assets/3b24f0fc-cae2-4030-96c2-246c5baa9881)
+
 
 ## 🚀 Deploy to Minikube
 ![kubernets-apply-deployment](https://github.com/user-attachments/assets/f01b1cd8-6ce4-470c-91d4-6c040e524c21)
