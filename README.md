@@ -66,20 +66,20 @@ Each service is containerized with Docker and deployed to a **local Kubernetes c
 
 ## minikube start 
 
-for customer-service
+## for customer-service
 ![customer-service-minikubestart](https://github.com/user-attachments/assets/9e99d344-59f1-4e09-b612-96031159801f)
 
-for product-service
+## for product-service
 ![product-service-minikubestart](https://github.com/user-attachments/assets/89184652-b9a6-4fdf-9f25-61e162a50adb)
 
 ## minikube status
-for customer-service
+## for customer-service
 ![customer-service-minikubestatus](https://github.com/user-attachments/assets/20298b99-956f-427a-98f8-1bb7e99de6c3)
 
-for product-service
+## for product-service
 ![product-service-minikubestatus](https://github.com/user-attachments/assets/73fe0bad-2388-44a1-92a5-3aeee4c2f67b)
 
-##☸️ Kubernetes Deployment
+## ☸️ Kubernetes Deployment
 ### Customer-service-deployment.yaml
 ![customer-service-deployment](https://github.com/user-attachments/assets/21c8e350-4f26-41fa-9aeb-9f50d952a1d3)
 
@@ -104,17 +104,17 @@ for product-service
 
 
 ## ✅ Deploy customer-service:
-kubectl apply -f k8s/customer-service-deployment.yaml <br>
-kubectl apply -f k8s/customer-service-service.yaml
+### kubectl apply -f customer-service-deployment.yaml <br>
+### kubectl apply -f customer-service-service.yaml
 
 ## ✅ Deploy product-service:
-kubectl apply -f k8s/product-service-deployment.yaml <br>
-kubectl apply -f k8s/product-service-service.yaml
+### kubectl apply -f product-service-deployment.yaml <br>
+### kubectl apply -f product-service-service.yaml
 
-### To check the status: 
+## To check the status: 
 
-kubectl get pods <br>
-kubectl get services
+### kubectl get pods <br>
+### kubectl get services
 ![Screenshot 2025-04-14 120733](https://github.com/user-attachments/assets/c93b1c17-1448-4f81-b8f1-cde0754764f0)
 
 ![Screenshot 2025-04-14 120749](https://github.com/user-attachments/assets/8dea0495-da2f-48b3-b3ce-80dd27f2207e)
