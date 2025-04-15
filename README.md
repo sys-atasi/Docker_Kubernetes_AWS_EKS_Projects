@@ -106,17 +106,17 @@ Each service is containerized with Docker and deployed to a **local Kubernetes c
 
 
 ## ✅ Deploy customer-service:
-# kubectl apply -f customer-deployment.yaml <br>
-# kubectl apply -f customer-service.yaml
+ kubectl apply -f customer-deployment.yaml <br>
+ kubectl apply -f customer-service.yaml
 
 ## ✅ Deploy product-service:
-# kubectl apply -f product-deployment.yaml <br>
-# kubectl apply -f product-service.yaml
+ kubectl apply -f product-deployment.yaml <br>
+ kubectl apply -f product-service.yaml
 
 ## To check the status: 
 
-# kubectl get pods <br>
-# kubectl get services
+ kubectl get pods <br>
+ kubectl get services
 ![Screenshot 2025-04-14 120733](https://github.com/user-attachments/assets/c93b1c17-1448-4f81-b8f1-cde0754764f0)
 
 ![Screenshot 2025-04-14 120749](https://github.com/user-attachments/assets/8dea0495-da2f-48b3-b3ce-80dd27f2207e)
